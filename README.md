@@ -2,9 +2,11 @@
 
 Please install the node, python2, jdk and react native first. Also, Please download android studio and configure the ANDROID_HOME environment variable
 
-#Version
+Version:
 react-native-cli: 2.0.1
+
 react-native: 0.62.2
+
 node: v12.12.0
 
 
