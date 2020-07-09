@@ -15,10 +15,10 @@ You can follow https://reactnative.dev/docs/environment-setup to setup a React N
 After clone the project to your computer, please follow the steps:
 1. open terminal and go to the project folder
 
-2. ```
+2. 
+```
 npm install
 ```
-
 
 3. 
 ```
