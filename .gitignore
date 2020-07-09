@@ -1,0 +1,37 @@
+# Gradle
+/android/app/build/
+
+# Android Studio
+.project
+.settings
+.classpath
+
+# Watchman
+.watchmanconfig
+
+# Android
+.idea
+.gradle
+local.properties
+*.iml
+/android/
+
+# Node
+node_modules
+*.log
+.nvm
+package-lock.json
+
+# OS X
+.DS_Store
+.vscode-test/
+coverage/
+.idea
+out
+src/**/nodeDebugLocation.json
+nls.*.json
+test/*.xml
+test/resources/projects/*
+
+# VS Code
+/.vscode/.react/

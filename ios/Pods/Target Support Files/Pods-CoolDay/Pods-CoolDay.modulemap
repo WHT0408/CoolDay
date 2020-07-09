@@ -1,0 +1,6 @@
+module Pods_CoolDay {
+  umbrella header "Pods-CoolDay-umbrella.h"
+
+  export *
+  module * { export * }
+}
