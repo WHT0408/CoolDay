@@ -14,6 +14,7 @@ import { Icon, } from 'react-native-elements';
 
 export default class UpdateUser extends React.Component {
     constructor(props) {
+        super(props);
         this.state = {
             email: '', 
             password: '',

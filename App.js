@@ -93,7 +93,7 @@ export default class App extends Component {
           {/* <Tab.Screen name='RecommendStack' component={RecommendStack} options={{tabBarLabel: '計劃',}} /> */}
           {/* <Tab.Screen name='MapStack' component={MapStack} options={{tabBarLabel: '地圖',}} /> */}
           <Tab.Screen name='FavoriteStack' component={FavoriteStack} options={{ tabBarLabel: '喜歡', }} />
-          <Tab.Screen name='AccountStack' component={AccountStack} options={{ tabBarLabel: '活動', }} />
+          <Tab.Screen name='AccountStack' component={AccountStack} options={{ tabBarLabel: '帳號', }} />
           {/* <Tab.Screen name='Test' component={TestScreen} /> */}
         </Tab.Navigator>
       </NavigationContainer>
