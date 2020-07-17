@@ -1383,14 +1383,14 @@ export default class RecommendScreen extends PureComponent {
         const maxEndTime = parseInt(moment(startEndStats[1]).format('HHmm'));
         const midTime = (minStartTime + maxEndTime) / 2;
 
-        console.log(minStartTime + " - " + midTime);
-        console.log(midTime + " - " + maxEndTime);
-        console.log("user history: " + minStartTime + " - " + maxEndTime);
+        //console.log(minStartTime + " - " + midTime);
+        //console.log(midTime + " - " + maxEndTime);
+        //console.log("user history: " + minStartTime + " - " + maxEndTime);
 
         const minTimeResult = Math.round((Math.floor(Math.random() * (midTime - minStartTime)) + minStartTime) / 100) * 100;
         const maxTimeResult = Math.round((Math.floor(Math.random() * (maxEndTime - midTime)) + midTime) / 100) * 100;
 
-        console.log("result: " + minTimeResult + " - " + maxTimeResult);
+        //console.log("result: " + minTimeResult + " - " + maxTimeResult);
 
         var restaurantNumStats = 0;
 
@@ -1823,9 +1823,9 @@ export default class RecommendScreen extends PureComponent {
 
         //start machine learning
         // const data = { act, actTypes, ratings };
-        console.log(data);
+        //console.log(data);
         //const mlData = this.mlData(data);
-        console.log(mlData);
+        //console.log(mlData);
 
         //const model = this.getModel(mlData);
 
@@ -1845,7 +1845,7 @@ export default class RecommendScreen extends PureComponent {
                     //recommendResult: recommend,
                     //isDialogShow: true,
                 });
-                console.log(recommend);
+                //console.log(recommend);
 
 
                 const itiTitle = currentName + "的一天" + " (" + moment().format('DD/MM/YYYY') +  ")";
@@ -2062,7 +2062,7 @@ export default class RecommendScreen extends PureComponent {
     }
 
     async train(data) {
-        console.log("training start!");
+        //console.log("training start!");
         const batchSize = 10000;
         const epochs = Math.floor(data.trainingData.xs.length/batchSize);
         const validationSplit = 0.2;
@@ -2078,13 +2078,13 @@ export default class RecommendScreen extends PureComponent {
                 validationSplit: validationSplit,
                 epochs: epochs
             })
-            .then((history) => console.log("loss: " + history.history.loss[0]));      
+            //.then((history) => console.log("loss: " + history.history.loss[0]));      
         }
-        console.log("training complete!");
+        //console.log("training complete!");
     }
 
     async recommendResult(userData, restaurantNum, data, maxActNum, mlData) {
-        console.log("recommend start!");
+        //console.log("recommend start!");
         const { act } = data;
         let results = [];
         var i = 0;
@@ -2105,7 +2105,7 @@ export default class RecommendScreen extends PureComponent {
         var recommendResultOther = results.filter(a => !a.types.includes('restaurant')).sort((a, b) => b.rate - a.rate).slice(0, maxActNum);
         var recommendResult = [...recommendResultFood, ...recommendResultOther];
         
-        console.log("recommend end!");
+        //console.log("recommend end!");
 
         return recommendResult;
     }
